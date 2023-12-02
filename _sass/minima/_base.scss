@@ -97,7 +97,13 @@ li {
   }
 }
 
+dt {
+  font-weight: bold;
+}
 
+dd {
+  margin-left: $spacing-unit;
+}
 
 /**
  * Headings
