@@ -35,7 +35,7 @@ header_pages:
 #show_excerpts: false
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
-minima:
+minima-classic:
   # Minima skin selection.
   # Available skins are:
   # classic	           Default, light color scheme.

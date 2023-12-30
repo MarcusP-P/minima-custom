@@ -156,7 +156,7 @@ Therefore, your `assets/css/style.scss` should contain the following at minimum:
 ---
 
 @import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/skins/{{ site.minima-custom.skin | default: 'classic' }}",
   "minima/initialize";
 ```
 
@@ -223,7 +223,7 @@ header_pages:
 
 ### Change default date format
 
-You can change the default date format by specifying `site.minima.date_format`
+You can change the default date format by specifying `site.minima-custom.date_format`
 in `_config.yml`.
 
 ```
