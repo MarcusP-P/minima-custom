@@ -24,9 +24,9 @@ body {
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
@@ -119,13 +119,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $link-base-color;
-  text-decoration: none;
 
   &:visited {
     color: $link-visited-color;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $link-hover-color;
     text-decoration: underline;
   }
@@ -137,8 +137,27 @@ a {
       text-decoration: underline;
     }
   }
-}
 
+  &.site-title {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  
+  }
+
+  nav & {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  
+  }
+}
 
 /**
  * Blockquotes
@@ -283,6 +302,6 @@ table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
