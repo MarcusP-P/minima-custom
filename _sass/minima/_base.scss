@@ -38,10 +38,8 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   overflow-wrap: break-word;
+  border-top: 5px solid $border-color-03;
 }
 
 /**
@@ -239,6 +237,9 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit * 0.5;
   padding-left: $spacing-unit * 0.5;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   @extend %clearfix;
 
   @media screen and (min-width: $on-large) {
