@@ -5,10 +5,11 @@
 
   <body>
     <div class="wrapper">
+      <a class="skip" href="#main">Skip to main content</a>
 
       {%- include header.html -%}
 
-      <main class="page-content" aria-label="Content">
+      <main id="main" class="page-content" aria-label="Content" focusorder="-1">
         {{ content }}
       </main>
       
