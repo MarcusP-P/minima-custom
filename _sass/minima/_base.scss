@@ -166,6 +166,16 @@ h6 {
  */
 a {
   color: $link-base-color;
+  text-decoration-color: $link-underline-color;
+
+  @supports (text-decoration-thickness: 0.5em) {
+    &:link,
+    &:visited {
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.15em;
+    }
+  }
 
   &:visited {
     color: $link-visited-color;
@@ -174,31 +184,12 @@ a {
   &:hover,
   &:focus {
     color: $link-hover-color;
-    text-decoration: underline;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
-    }
-  }
-
-  &.site-title {
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      color: $link-hover-color;
-      text-decoration: underline;
-    }
-  }
-
-  nav & {
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      color: $link-hover-color;
       text-decoration: underline;
     }
   }

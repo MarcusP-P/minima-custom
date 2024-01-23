@@ -16,13 +16,14 @@ $lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
 
 $lm-site-title-color:      $lm-brand-color-dark !default;
 
-$lm-text-color:            #111111 !default;
-$lm-background-color:      #fdfdfd !default;
+$lm-text-color: #000000 !default;
+$lm-background-color: #ffffff !default;
 $lm-code-background-color: #eeeeff !default;
 
-$lm-link-base-color:       #2a7ae2 !default;
-$lm-link-visited-color:    darken($lm-link-base-color, 15%) !default;
+$lm-link-base-color: #4040ff !default;
+$lm-link-visited-color: $lm-text-color !default;
 $lm-link-hover-color:      $lm-text-color !default;
+$lm-link-underline-color: $lm-link-base-color !default;
 
 $lm-border-color-01:       $lm-brand-color-light !default;
 $lm-border-color-02:       lighten($lm-brand-color, 35%) !default;
@@ -112,13 +113,14 @@ $dm-brand-color-dark:      darken($dm-brand-color, 35%) !default;
 
 $dm-site-title-color:      $dm-brand-color-light !default;
 
-$dm-text-color:            #bbbbbb !default;
-$dm-background-color:      #181818 !default;
+$dm-text-color: #ffffff !default;
+$dm-background-color: #000000 !default;
 $dm-code-background-color: #212121 !default;
 
-$dm-link-base-color:       #79b8ff !default;
+$dm-link-base-color: #6565ff !default;
 $dm-link-visited-color:    $dm-link-base-color !default;
 $dm-link-hover-color:      $dm-text-color !default;
+$dm-link-underline-color: $dm-link-base-color !default;
 
 $dm-border-color-01:       $dm-brand-color-dark !default;
 $dm-border-color-02:       $dm-brand-color-light !default;
@@ -223,6 +225,7 @@ $code-background-color: $lm-code-background-color;
 $link-base-color: $lm-link-base-color;
 $link-visited-color: $lm-link-visited-color;
 $link-hover-color: $lm-link-hover-color;
+$link-underline-color: $lm-link-underline-color;
 
 $border-color-01: $lm-border-color-01;
 $border-color-02: $lm-border-color-02;
@@ -253,6 +256,7 @@ $table-border-color: $lm-table-border-color;
     --minima-link-base-color: #{$lm-link-base-color};
     --minima-link-visited-color: #{$lm-link-visited-color};
     --minima-link-hover-color: #{$lm-link-hover-color};
+    --minima-link-underline-color: #{$lm-link-underline-color};
 
     --minima-border-color-01: #{$lm-border-color-01};
     --minima-border-color-02: #{$lm-border-color-02};
@@ -282,6 +286,7 @@ $table-border-color: $lm-table-border-color;
       --minima-link-base-color: #{$dm-link-base-color};
       --minima-link-visited-color: #{$dm-link-visited-color};
       --minima-link-hover-color: #{$dm-link-hover-color};
+      --minima-link-underline-color: #{$dm-link-underline-color};
 
       --minima-border-color-01: #{$dm-border-color-01};
       --minima-border-color-02: #{$dm-border-color-02};
@@ -310,6 +315,7 @@ $table-border-color: $lm-table-border-color;
   $link-base-color: var(--minima-link-base-color);
   $link-visited-color: var(--minima-link-visited-color);
   $link-hover-color: var(--minima-link-hover-color);
+  $link-underline-color: var(--minima-link-underline-color);
 
   $border-color-01: var(--minima-border-color-01);
   $border-color-02: var(--minima-border-color-02);

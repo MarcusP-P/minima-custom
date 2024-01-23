@@ -11,6 +11,27 @@ header.site-header {
   flex-direction: row;
   flex-wrap: wrap;
 
+  a {
+    @supports (text-decoration-thickness: 0.5em) {
+      text-decoration-thickness: initial;
+      text-underline-offset: initial;
+    }
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+
+    &:link,
+    &:visited {
+      color: $site-title-color;
+      text-decoration-color: $site-title-color;
+
+    }
+  }
+
   a.site-title {
     display: block;
     @include relative-font-size(1.625);
@@ -36,12 +57,12 @@ header.site-header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  
+
     ul {
       display: flex;
       justify-content: center;
       flex-direction: row;
-      flex-wrap: wrap;    
+      flex-wrap: wrap;
       list-style: none;
       margin: 0px;
       column-gap: 20px;
@@ -49,16 +70,16 @@ header.site-header {
 
       @media screen and (max-width: 370px) {
         flex-direction: column;
-      }      
+      }
 
       li {
         padding: 0;
         display: inline;
         @media screen and (max-width: 370px) {
           text-align: center;
-        }      
-          .page-link{
-          color: $text-color;
+        }
+        .page-link {
+          color: $site-title-color;
           line-height: $base-line-height;
         }
       }
