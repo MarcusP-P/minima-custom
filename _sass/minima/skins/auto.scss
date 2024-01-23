@@ -18,12 +18,12 @@ $lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
 $lm-site-title-color:      $lm-brand-color-dark !default;
 
 $lm-heading-color:         #111111 !default;
-$lm-text-color:            $lm-brand-color-dark !default;
-$lm-background-color:      #fdfdfd !default;
-$lm-code-background-color: #f6f8fa !default;
+$lm-text-color:            #000000 !default;
+$lm-background-color:      #ffffff !default;
+$lm-code-background-color: #eeeeff !default;
 
-$lm-link-base-color:       #1e69d8 !default;
-$lm-link-visited-color:    darken($lm-link-base-color, 15%) !default;
+$lm-link-base-color:       #4040ff !default;
+$lm-link-visited-color:    $lm-link-base-color !default;
 $lm-link-hover-color:      $lm-text-color !default;
 
 $lm-border-color-01:       $lm-brand-color-light !default;
@@ -128,12 +128,12 @@ $dm-brand-color-dark:      darken($dm-brand-color, 43%) !default;
 $dm-site-title-color:      $dm-brand-color-light !default;
 
 $dm-heading-color:         #bbbbbb !default;
-$dm-text-color:            darken($dm-heading-color, 15%) !default;
-$dm-background-color:      #181818 !default;
-$dm-code-background-color: #222222 !default;
+$dm-text-color: #ffffff !default;
+$dm-background-color: #000000 !default;
+$dm-code-background-color: #212121 !default;
 
-$dm-link-base-color:       #5691cd !default;
-$dm-link-visited-color:    #80bbff !default;
+$dm-link-base-color: #6565ff !default;
+$dm-link-visited-color:    $dm-link-base-color !default;
 $dm-link-hover-color:      $dm-text-color !default;
 
 $dm-border-color-01:       $dm-brand-color-dark !default;

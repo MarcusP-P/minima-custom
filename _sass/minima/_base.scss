@@ -153,6 +153,9 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $link-base-color;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.15em;
 
   &:visited {
     color: $link-visited-color;
@@ -161,8 +164,6 @@ a {
   &:hover,
   &:focus {
     color: $link-hover-color;
-    text-decoration: underline $brand-color;
-    text-underline-offset: 3px;
   }
 
   .social-media-list &:hover {
@@ -179,8 +180,10 @@ a {
     &:focus {
       color: $link-hover-color;
       text-decoration: underline;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.15em;
     }
-  
+
   }
 
   nav & {
@@ -189,8 +192,10 @@ a {
     &:focus {
       color: $link-hover-color;
       text-decoration: underline;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.15em;
     }
-  
+
   }
 }
 
