@@ -1,5 +1,5 @@
 <li>{% assign entry = include.item %}
-  <a rel="{% unless entry.platform == 'rss' %}me {% endunless %}noopener" href="{{ entry.user_url }}" target="_blank" rel="noopener">
+  <a rel="{% unless entry.platform == 'rss' %}me {% endunless %}noopener noreferrer" href="{{ entry.user_url }}" target="_blank" >
     <svg class="svg-icon grey" aria-label="{{ entry.title | default: entry.platform }}, opens in new tab">
       <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: entry.platform | relative_url }}"></use>
     </svg>
