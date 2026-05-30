@@ -2,6 +2,39 @@ html {
   font-size: $base-font-size;
 }
 
+a[href="#main"] {
+  display: block;
+  color: $link-base-color;
+  background: $background-color;
+  border: .25em solid $brand-color-dark;
+  margin: 0;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  position: absolute;
+  left: -1000px;
+  z-index: 2;
+
+  &:link,
+  &:visited {
+    color: $text-color;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    display: block;
+    top: 0;
+    left: 0;
+  }
+
+  @media print {
+    & {
+      display: none;
+    }
+  }
+}
+
+
 /**
  * Reset some basic elements
  */
