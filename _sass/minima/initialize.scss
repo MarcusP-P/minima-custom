@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@forward "minima/custom-variables"; // Hook to override predefined variables.
+
 // Define defaults for each variable.
 
 $base-font-family: system-ui, sans-serif;
@@ -42,9 +44,7 @@ $on-large:         $on-laptop !default;
 }
 
 // Import pre-styling-overrides hook and style-partials.
-@import
-  "minima/custom-variables", // Hook to override predefined variables.
-  "minima/base",             // Defines element resets.
-  "minima/layout",           // Defines structure and style based on CSS selectors.
-  "minima/custom-styles"     // Hook to override existing styles.
+//  "minima/base",             // Defines element resets.
+//  "minima/layout",           // Defines structure and style based on CSS selectors.
+//  "minima/custom-styles"     // Hook to override existing styles.
 ;

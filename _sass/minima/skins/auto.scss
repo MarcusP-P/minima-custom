@@ -1,4 +1,5 @@
 @charset "utf-8";
+@use "sass:meta";
 
 // Default color scheme settings
 // These are overridden in classic.css and dark.scss
@@ -390,10 +391,36 @@ $table-border-color: $lm-table-border-color;
 
   @include dm-highlight;
 
-
 } @else {
 
   // Classic skin syntax highlighting
   @include lm-highlight;
 
 }
+
+@include meta.load-css ("minima/theme", $with: (
+  "brand-color": $brand-color,
+  "brand-color-light": $brand-color-light,
+  "brand-color-dimmed": $brand-color-dimmed,
+  "brand-color-dark": $brand-color-dark,
+
+  "site-title-color": $site-title-color,
+
+  "heading-color": $heading-color,
+  "text-color": $text-color,
+  "background-color": $background-color,
+  "code-background-color": $code-background-color,
+
+  "link-base-color": $link-base-color,
+  "link-visited-color": $link-visited-color,
+  "link-hover-color": $link-hover-color,
+
+  "border-color-01": $border-color-01,
+  "border-color-02": $border-color-02,
+  "border-color-03": $border-color-03,
+
+  "table-text-color": $table-text-color,
+  "table-zebra-color": $table-zebra-color,
+  "table-header-bg-color": $table-header-bg-color,
+  "table-header-border": $table-header-border,
+  "table-border-color": $table-border-color));

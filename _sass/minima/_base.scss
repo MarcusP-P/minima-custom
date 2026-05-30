@@ -1,5 +1,33 @@
+@use "minima/initialize.scss";
+
+$brand-color: "" !default;
+$brand-color-light: "" !default;
+$brand-color-dimmed: "" !default;
+$brand-color-dark: "" !default;
+
+$site-title-color: "" !default;
+
+$heading-color: "" !default;
+$text-color: "" !default;
+$background-color: "" !default;
+$code-background-color: "" !default;
+
+$link-base-color: "" !default;
+$link-visited-color: "" !default;
+$link-hover-color: "" !default;
+
+$border-color-01: "" !default;
+$border-color-02: "" !default;
+$border-color-03: "" !default;
+
+$table-text-color: "" !default;
+$table-zebra-color: "" !default;
+$table-header-bg-color: "" !default;
+$table-header-border: "" !default;
+$table-border-color: "" !default;
+
 html {
-  font-size: $base-font-size;
+  font-size: initialize.$base-font-size;
 }
 
 a[href="#main"] {
@@ -52,7 +80,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: initialize.$base-font-weight #{initialize.$base-font-size}/#{initialize.$base-line-height} initialize.$base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -76,12 +104,12 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: initialize.$spacing-unit * .5;
 }
 
 hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: initialize.$spacing-unit;
+  margin-bottom: initialize.$spacing-unit;
 }
 
 /**
@@ -111,7 +139,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: initialize.$small-font-size;
 }
 
 
@@ -120,7 +148,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: initialize.$spacing-unit;
 }
 
 li {
@@ -135,7 +163,7 @@ dt {
 }
 
 dd {
-  margin-left: $spacing-unit;
+  margin-left: initialize.$spacing-unit;
 }
 
 /**
@@ -205,8 +233,8 @@ a {
 blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * .5;
-  @include relative-font-size(1.05);
+  padding-left: initialize.$spacing-unit * .5;
+  @include initialize.relative-font-size(1.05);
   font-style: italic;
 
   > :last-child {
@@ -225,10 +253,10 @@ blockquote {
  */
 pre,
 code {
-  font-family: $code-font-family;
+  font-family: initialize.$code-font-family;
   background-color: $code-background-color;
 
-  @include media-query($on-palm) {
+  @include initialize.media-query(initialize.$on-palm) {
     font-family: monospace;
   }
 }
@@ -278,14 +306,14 @@ code.highlighter-rouge {
  * Wrapper
  */
 .wrapper {
-  max-width: $content-width;
+  max-width: initialize.$content-width;
   margin: 0 auto;
-  padding: 0 $spacing-unit;
+  padding: 0 initialize.$spacing-unit;
   @extend %clearfix;
 
-  @media screen and (max-width: $on-medium) {
-    padding-right: $spacing-unit * 0.6;
-    padding-left: $spacing-unit * 0.6;
+  @media screen and (max-width: initialize.$on-medium) {
+    padding-right: initialize.$spacing-unit * 0.6;
+    padding-left: initialize.$spacing-unit * 0.6;
   }
 }
 
@@ -328,9 +356,9 @@ code.highlighter-rouge {
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: initialize.$spacing-unit;
   width: 100%;
-  text-align: $table-text-align;
+  text-align: initialize.$table-text-align;
   color: $table-text-color;
   border-collapse: collapse;
   border: 1px solid $table-border-color;
@@ -340,7 +368,7 @@ table {
     }
   }
   th, td {
-    padding: ($spacing-unit * 33.3333333333 * .01) ($spacing-unit * .5);
+    padding: (initialize.$spacing-unit * 33.3333333333 * .01) (initialize.$spacing-unit * .5);
   }
   th {
     background-color: $table-header-bg-color;
@@ -350,7 +378,7 @@ table {
     border: 1px solid $table-border-color;
   }
 
-  @include media-query($on-laptop) {
+  @include initialize.media-query(initialize.$on-laptop) {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;

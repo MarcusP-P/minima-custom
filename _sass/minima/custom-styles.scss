@@ -1,2 +1,28 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+$brand-color: "" !default;
+$brand-color-light: "" !default;
+$brand-color-dimmed: "" !default;
+$brand-color-dark: "" !default;
+
+$site-title-color: "" !default;
+
+$heading-color: "" !default;
+$text-color: "" !default;
+$background-color: "" !default;
+$code-background-color: "" !default;
+
+$link-base-color: "" !default;
+$link-visited-color: "" !default;
+$link-hover-color: "" !default;
+
+$border-color-01: "" !default;
+$border-color-02: "" !default;
+$border-color-03: "" !default;
+
+$table-text-color: "" !default;
+$table-zebra-color: "" !default;
+$table-header-bg-color: "" !default;
+$table-header-border: "" !default;
+$table-border-color: "" !default;
