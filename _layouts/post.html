@@ -12,10 +12,14 @@ layout: base
       <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
         {{ pdate | date: date_format }}
       </time>
-      {%- if page.modified_date -%}
+      {%- if page.modified_date or page.last_modified_at -%}
         <span class="bullet-divider">•</span>
         <span class="meta-label">Updated:</span>
-        {%- assign mdate = page.modified_date | date_to_xmlschema %}
+        {%- if page.modified_date -%}
+          {%- assign mdate = page.modified_date | date_to_xmlschema %}
+        {%- else -%}
+          {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
+        {%- endif -%}
         <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
           {{ mdate | date: date_format }}
         </time>
