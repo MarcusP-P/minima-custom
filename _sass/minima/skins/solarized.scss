@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @charset "utf-8";
 
 // Solarized skin
@@ -70,7 +72,7 @@ $sol-mix2:     $sol-light-mix2;
 $sol-mix3:     $sol-light-mix3;
 $sol-mix4:     $sol-light-mix4;
 
-$sol-mono1-dimmed: darken($sol-base1, 20%);
+$sol-mono1-dimmed: color.adjust($sol-base1, $lightness: -20%, $space: hsl);
 $sol-link-color:   $sol-dark-blue;
 $sol-link-visited: $sol-dark-blue2;
 
@@ -87,7 +89,7 @@ $sol-mark-line-bgcolor: #ffffcc;
   $sol-mix3:   $sol-dark-mix3;
   $sol-mix4:   $sol-dark-mix4;
 
-  $sol-mono1-dimmed: lighten($sol-base01, 16%);
+  $sol-mono1-dimmed: color.adjust($sol-base01, $lightness: 16%, $space: hsl);
   $sol-link-color:   $sol-light-blue;
   $sol-link-visited: $sol-light-blue2;
 
@@ -106,7 +108,7 @@ $sol-mark-line-bgcolor: #ffffcc;
     --solarized-mix3:   #{$sol-light-mix3};
     --solarized-mix4:   #{$sol-light-mix4};
 
-    --solarized-mono1-dimmed: #{darken($sol-base1, 20%)};
+    --solarized-mono1-dimmed: #{color.adjust($sol-base1, $lightness: -20%, $space: hsl)};
     --solarized-link-color:   #{$sol-dark-blue};
     --solarized-link-visited: #{$sol-dark-blue2};
 
@@ -125,7 +127,7 @@ $sol-mark-line-bgcolor: #ffffcc;
       --solarized-mix3:   #{$sol-dark-mix3};
       --solarized-mix4:   #{$sol-dark-mix4};
 
-      --solarized-mono1-dimmed: #{lighten($sol-base01, 16%)};
+      --solarized-mono1-dimmed: #{color.adjust($sol-base01, $lightness: 16%, $space: hsl)};
       --solarized-link-color:   #{$sol-light-blue};
       --solarized-link-visited: #{$sol-light-blue2};
 
